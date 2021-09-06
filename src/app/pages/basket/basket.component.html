@@ -1,0 +1,21 @@
+<div class="container container__basket">
+  <p class="basket-header">Корзина</p>
+  <p class="no-item" *ngIf="!(basketItems)?.length; else list">
+    В корзине нет товаров
+  </p>
+  <ng-template #list>
+    <div class="basket-item" *ngFor="let item of basketItems">
+      <p class="basket-item__description">{{item.description}}</p>
+      <div class="basket-item__actions">
+        <mat-form-field class="basket-item__input">
+          <input matInput type="number" placeholder="Количество тонн"
+             [ngModel]="item.count" (ngModelChange)="editItem(item.id, +$event)"/>
+        </mat-form-field>
+        <button class="basket-item__delete" (click)="deleteItem(item.id)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+    </div>
+  </ng-template>
+  <a class="basket-item__link" [routerLink]="['/']">Вернуться к списку товаров</a>
+</div>
