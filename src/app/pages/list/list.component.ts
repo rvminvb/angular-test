@@ -1,7 +1,7 @@
-import {Component} from '@angular/core';
-import {Router} from '@angular/router';
-import {Product} from '@app/interfaces/product';
-import {BasketService} from '@app/services/basket.service';
+import {  Component } from '@angular/core';
+import {  Router  } from '@angular/router';
+import {  Product } from '@app/interfaces/product';
+import {  BasketService } from '@app/services/basket.service';
 
 @Component({
   selector: 'app-list',
