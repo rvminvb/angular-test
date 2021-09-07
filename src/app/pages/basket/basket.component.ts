@@ -27,4 +27,8 @@ export class BasketComponent implements OnInit {
       this.ngOnInit();
     }
   }
+
+  get total() {
+    return this.basketItems.reduce((total, item) => total + item.price * item.count, 0)
+  }
 }

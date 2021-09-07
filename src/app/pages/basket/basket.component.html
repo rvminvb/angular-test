@@ -15,7 +15,9 @@
           <mat-icon>delete</mat-icon>
         </button>
       </div>
+      <p>Цена за тонну: {{item.price}}</p>
     </div>
   </ng-template>
+  <p class="basket-total"> Итоговая цена: {{total}} </p>
   <a class="basket-item__link" [routerLink]="['/']">Вернуться к списку товаров</a>
 </div>
